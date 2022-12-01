@@ -10,7 +10,7 @@ import pandas as pd
 import tensorflow as tf
 
 
-app_NN = Flask(__name__)
+app = Flask(__name__)
 
 
 def get_prediction_depth(df):
@@ -70,5 +70,5 @@ def processing():
 
 
 if __name__ == '__main__':
-    app_NN.run()
+    app.run()
 
