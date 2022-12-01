@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+    {% if message_d %}
+        <p>{{ message_d }}</p>
+    {% endif %}
+
+    {% if message_w %}
+        <p>{{ message_w }}</p>
+    {% endif %}
+
+
+    <form action="" method="post">
+        <p>
+	    <label for="IW">IW</label>
+	    <input type="text" name="IW">
+        </p>
+
+
+        <p>
+	    <label for="IF">IF</label>
+	    <input type="text" name="IF">
+        </p>
+
+
+        <p>
+	    <label for="VW">VW</label>
+	    <input type="text" name="VW">
+        </p>
+
+
+        <p>
+	    <label for="FP">FP</label>
+	    <input type="text" name="FP">
+        </p>
+
+	<p>
+	    <input type="submit">
+	</p>
+    </form>
+
+</body>
+</html>
