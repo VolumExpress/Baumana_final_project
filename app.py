@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
@@ -25,13 +19,7 @@ def get_prediction_width_width(df):
 
     return f"Ширина сварного шва равна {y_pred}"
 
-
-@app.route('/')
-def index():
-    return "main"
-
-
-@app.route('/predict/', methods=['post', 'get'])
+@app.route('/', methods=['post', 'get'])
 def processing():
     message_d = ''
     message_w = ''
@@ -71,4 +59,3 @@ def processing():
 
 if __name__ == '__main__':
     app.run()
-
