@@ -19,15 +19,19 @@ def get_prediction_width_width(df):
 
     return f"Ширина сварного шва равна {y_pred}"
 
-@app.route('/', methods=['post', 'get'])
+@app.route('/')
+def index():
+    return "main"
+
+@app.route('/predict/', methods=['post', 'get'])
 def processing():
     message_d = ''
     message_w = ''
     if request.method == 'POST':
-        IW = int(request.form.get('IW'))
-        IF = int(request.form.get('IF'))
-        VW = int(request.form.get('VW'))
-        FP = int(request.form.get('FP'))
+        IW = float(request.form.get('IW'))
+        IF = float(request.form.get('IF'))
+        VW = float(request.form.get('VW'))
+        FP = float(request.form.get('FP'))
         
         stdIW = 1.6666666666666663
         meanIW = 45.666666666666664
