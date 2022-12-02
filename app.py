@@ -13,7 +13,7 @@ def get_prediction_depth(df):
 
     return f"Глубина сварного шва равна {y_pred}"
 
-def get_prediction_width_width(df):
+def get_prediction_width(df):
     model = tf.keras.models.load_model(r"models\NN_model_for_width")
     y_pred = model.predict(df)
 
@@ -56,7 +56,7 @@ def processing():
         
         
         message_d = get_prediction_depth(df)
-        message_w = get_prediction(df)
+        message_w = get_prediction_width(df)
 
     return render_template('login.html', message_d=message_d, message_w=message_w)
 
